@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+:root {
+    --bg-color: Cornsilk;
+    --sq-color: CadetBlue;
+    --destaque-color: Aquamarine;
+    --bg--main-color: DarkGray; 
+  }
+
+body{
+    background-color: var(--bg--main-color);
+}
+
+
+.title{
+    text-align: center;
+    margin: 20px 40px;
+}
+
+
+.contaner{
+    background-color: var(--bg-color);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+h2{
+    padding: 10px;
+}
+.teste-flex-box div{
+    background-color: var(--sq-color);
+    width: 100px;
+    text-align: center;
+    margin: 20px 2px;
+    border-radius: 5px;   
+}
+
+/* Padrão block */
+.box1 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: block;
+}
+
+/* Padrão flex */
+.box2 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: flex;
+}
+
+
+.box3 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* Default */
+.box4 { 
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.box5 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content: flex-end;
+   
+}
+
+/*Muda a posição (considerando a luargura da div) ; Muda a ordem dos elementos */
+.box6 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row-reverse;
+   
+}
+
+.box7 {
+    font-size: 30px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.box8 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;   
+}
+
+
+.box9 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.box10 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;   
+   
+}
+
+
+.box11 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+}
+
+.box12 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start; 
+}
+
+.box13{
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   
+}
+
+/* Aqui ele não vai para o canto direito pois se baseia no height e esse está delimitado */
+.box14 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column-reverse;   
+}
+
+
+/* Wrap */
+
+.teste-flex-wrap div{
+    background-color: var(--sq-color);
+    width: 100px;
+    text-align: center;
+    margin: 20px 2px;
+    border-radius: 5px;   
+}
+
+.box15 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row; 
+    flex-wrap:wrap;  
+}
+
+.box16 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row; 
+    flex-wrap:nowrap;  
+}
+
+/* Flex-iten*/
+
+.teste-flex-iten div{
+    background-color: var(--sq-color);
+    width: 100px;
+    text-align: center;
+    margin: 20px 2px;
+    border-radius: 5px;   
+}
+
+.box17 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row;   
+}
+
+/* por default é 0 mas pode crescer em largura conforme o número selecionado */
+.box17 .item2{
+    background-color: var(--destaque-color);
+    flex-grow: 1;
+}
+
+.box18 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row; 
+    
+}
+
+
+/* flex-basis pode ser auto, 0 e outras unidades.  Se o grow for igual ou maior que 1, ele irá tentar manter o elemento com uma largura padrão, independente do conteúdo. Caso contrário o item terá a largura do seu conteúdo. */
+.box18 .item2{
+    background-color:var(--destaque-color);
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+
+
+.box19 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row; 
+    width: 80%;
+}
+
+
+
+/* Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1. flex-shrink: 0 impede que o item diminua. e flex-shrink: 1 é o default  */
+.box19 .item2 {
+    background-color:var(--destaque-color);
+    flex-grow: 1;
+	flex-shrink: 3;
+	flex-basis: 10px;
+  
+}
+
+
+.box20 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row; 
+   
+}
+
+
+/* Order : Ordena o item de acordo com o número escolhido */
+.box20 .item2 {
+    background-color:var(--destaque-color);
+    order:-1; 
+}
+
+
+
+/* O flex é atalho para as propriedades: flex-grow, flex-shrink e flex-basis. É mais culmumente usado ao invés das propriedades separadamente */
+.box21 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction:row;
+}
+
+/* Define flex-grow: 1; flex-shrink: 1; e flex-basis: 0; */
+.box21 .item1{
+    background-color:var(--destaque-color);
+    flex: 1 1 auto;
+}
+
+
+/* Padrão: será flex-grow: 0, flex-shrink: 1 e flex-basis: auto */
+.box21 .item2{
+    background-color:var(--destaque-color);
+    flex: 0 1 auto;
+}
+
+/* Neste caso o flex-grow será de 2, o flex-shrink continuará 1 e o flex-basis 0 */
+.box21 .item3{
+    background-color:var(--destaque-color);
+    flex: 2
+}
+
+
+/* flex-grow: 3, flex-shrink: 2 e flex-basis: 300px */
+.box21 .item4{
+    background-color:var(--destaque-color);
+    flex: 3 2 300px;
+}
+
+
